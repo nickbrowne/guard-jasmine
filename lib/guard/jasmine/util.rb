@@ -62,7 +62,7 @@ module Guard
 
           if version
             # Remove all but version, e.g. from '1.5 (development)'
-            cleaned_version = version.match(/(\d\.)*(\d)/)
+            cleaned_version = version.match(/(\d+\.)*(\d+)/)
 
             if cleaned_version
               if Gem::Version.new(cleaned_version[0]) < Gem::Version.new('1.3.0')
